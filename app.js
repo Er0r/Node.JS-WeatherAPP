@@ -27,7 +27,7 @@ const getData = async (url) => {
 
         // console.log(data.data[0].weather.description);
         var weatherStat = data.data[0].weather.description;
-        if(weatherStat.search('clouds') || weatherStat.search('thunderstorm') ||  weatherStat.search('rain') ){
+        if(weatherStat.includes('clouds') || weatherStat.includes('thunderstorm') ||  weatherStat.includes('rain') ){
             background.style.backgroundImage = "url('./assets/img/rainy.jpg')"
         } else {
             background.style.backgroundImage = "url('./assets/img/clear.jpg')"
